@@ -11,7 +11,7 @@ export default function App() {
 
   async function loadCustomers() {
     const res = await api.get("/customers")
-    console.log(res);
+    console.log(res.data);
   }
 
   return (

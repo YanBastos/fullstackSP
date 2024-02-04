@@ -3,7 +3,7 @@ import prismaClient from "../prisma";
 
 interface CreateCustomerProps{
     name: string;
-    email:string
+    email:string;
 }
 
 class CreateCustomerService {
