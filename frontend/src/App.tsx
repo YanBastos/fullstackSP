@@ -1,9 +1,21 @@
-export  default function App(){
+export default function App() {
   return (
     <div className="w-full min-h-screen bg-gray-700 flex justify-center px-4">
-      <main className="my-10 w-full bg-red-500 md:max-w-2xl md:bg-green-500">
+      <main className="my-10 w-full md:max-w-2xl">
         <h1 className="text-4xl font-medium text-white m-2">Clientes</h1>
-        <p>Texto exemplo para commit</p>
+
+        <form className="flex flex-col my-6">
+          <label className="font-medium text-white">Nome:</label>
+          <input type="text"
+            placeholder="Digite seu nome completo"
+            className="w-full mb-5 p-2 rounded" />
+
+          <label className="font-medium text-white" >Email:</label>
+          <input type="text"
+            placeholder="Digite seu email:"
+            className="w-full mb-5 p-2 rounded" />
+        </form>
+
       </main>
     </div>
   )
