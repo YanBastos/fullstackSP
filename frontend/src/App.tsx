@@ -1,3 +1,6 @@
+import { FiTrash } from 'react-icons/fi'
+
+
 export default function App() {
   return (
     <div className="w-full min-h-screen bg-gray-700 flex justify-center px-4">
@@ -6,15 +9,36 @@ export default function App() {
 
         <form className="flex flex-col my-6">
           <label className="font-medium text-white">Nome:</label>
-          <input type="text"
+          <input
+            type="text"
             placeholder="Digite seu nome completo"
             className="w-full mb-5 p-2 rounded" />
 
           <label className="font-medium text-white" >Email:</label>
-          <input type="text"
+          <input
+            type="text"
             placeholder="Digite seu email:"
             className="w-full mb-5 p-2 rounded" />
+
+          <input
+            type="submit"
+            value="Cadastrar"
+            className="cursor-pointer w-full p-2  bg-green-500 font-medium rounded"
+          />
         </form>
+
+        <section className="flex flex-col">
+          <article className="w-full bg-white rounded p-2 relative hover:scale-105 duration-200">
+
+            <p><span className="font-medium">Nome: </span>Mateus </p>
+            <p><span className="font-medium">Email: </span>test@test</p>
+            <p><span className="font-medium">Status: </span>Ativo</p>
+
+            <button className='bg-red-500 w-7 h-7 flex items-center justify-center rounded-lg absolute -right-2 -top-2'>
+              <FiTrash size={18} color='fff' />
+            </button>
+          </article>
+        </section>
 
       </main>
     </div>
