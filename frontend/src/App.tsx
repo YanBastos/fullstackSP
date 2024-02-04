@@ -1,7 +1,19 @@
+import { useEffect, useState } from 'react'
 import { FiTrash } from 'react-icons/fi'
+import { api } from "./services/api"
 
 
 export default function App() {
+
+  useEffect(() => {
+    loadCustomers()
+  }, [])
+
+  async function loadCustomers() {
+    const res = await api.get("/customers")
+    console.log(res);
+  }
+
   return (
     <div className="w-full min-h-screen bg-gray-700 flex justify-center px-4">
       <main className="my-10 w-full md:max-w-2xl">
